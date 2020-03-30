@@ -1,2 +1,2 @@
 # QRespawn
-A css framework for quick use in projects.
+A css framework for quick use in web development projects.
