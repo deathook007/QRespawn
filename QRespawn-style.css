@@ -1,132 +1,141 @@
-/* Basic colors used
-Light: #F2D7D5,#D2B4DE,#85C1E9,#7ed56f,#F7DC6F,#F8C471,#EAECEE,#FDFEFE 
-Medium: #CD6155,#8E44AD,#3498DB,#55c57a,#F4D03F,#F5B041,#D0D3D4,#E5E8E8
-Dark: #C0392B,#7D3C98,#2874A6,#28b485,#F1C40F,#F39C12,#616A6B,#17202A 
-*/
+/* Basic colors useD
 
-*,*:before,*:after
-{
-    /*Here dimensions includes padding and border but not the margin as a framework*/
+Light: #F2D7D5,#D2B4DE,#85C1E9,#7ed56f,#F7DC6F,#F8C471,#EAECEE,#FDFEFE 
+
+Medium: #CD6155,#8E44AD,#3498DB,#55c57a,#F4D03F,#F5B041,#D0D3D4,#E5E8E8
+
+Dark: #C0392B,#7D3C98,#2874A6,#28b485,#F1C40F,#F39C12,#616A6B,#17202A */
+
+*,*:before,*:after {
+	/* To provide margin and padding 0 to all including sudo elements */
+        margin: 0;
+        padding: 0;
+	
+        /* If you set box-sizing: border-box; on an element, padding and border are included in the width and height */
+        box-sizing: inherit;
+	
+        /*Here dimensions includes padding and border but not the margin as a framework*/
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-o-box-sizing:border-box;
 }
 
-html,body
-{
+/* Use rem in place of px bcs rem is relation to root size it helps in making web more responsive */
+
+html,body {
+	/* Implies 1rem=10px root size but px is not a good used practice*/
+	
+        /* Default font size is 16px **10/16=62.5** */
+        font-size: 62.5%;
+	@include respond(tab-land) {
+        /* width<1200? */
+        font-size: 56.25%; /* 1em=9px -> 9/16*100 -> 56.25% */
+        }
+        @include respond(tab-port) {
+        font-size: 50%;
+        }
+        @include respond(big-desk) {
+        font-size: 75%;
+        }
         margin: 0;
 	padding: 0;
-	font-size: 100%;
+	
+	/* We use inheritance with box sizing for more responsiveness */
+        box-sizing: border-box;
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	color: #222;
+	width: 100%;
+        height: 100%;
+        overflow-x: hidden;
 }
 
-a
-{
+/* TAG */
+a {
 	text-decoration: none;
 	color:#555;
 }
 
-
 /* HEADINGS */
 
-h1,h2,h3,h4,h5,h6
-{
+h1,h2,h3,h4,h5,h6 {
 	color:#333;
 }
 
-h1
-{
+h1 {
 	font-size: 3em;
 }
 
-h2
-{
+h2 {
 	font-size:2.7em;
 }
 
-h3
-{
+h3 {
 	font-size: 2.4em;
 }
 
-h4
-{
+h4 {
 	font-size: 2em;
 }
 
-h5
-{
+h5 {
 	font-size: 1.4em;
 }
 
-h6
-{
+h6 {
 	font-size: 1em;
 }
 
 
 /* GRID */
 
-.full 
-{
+.full {
 	width: 100%;
 }
 
-.four-fifth
-{
+.four-fifth {
 	width: 80%;
 }
 
-.two-third{
+.two-third {
 	width: 66.66%;
 }
 
-.three-fifth
-{
+.three-fifth {
 	width: 60%;
 }
 
-.half
-{
+.half {
 	width: 50%;
 }
 
-.two-fifth
-{
+.two-fifth {
 	width: 40%;
 }
 
-.third
-{
+.third {
 	width: 33.33%;
 }
 
-.quarter
-{
+.quarter {
 	width: 25%;
 }
 
 
 /* ALIGNMENT */
-
-.center-text
-{
+/* UTILITY CLASSES */
+.center-text {
 	text-align: center;
 }
 
-.right-text
-{
+.right-text {
 	text-align: right;
 }
 
-.left-text
-{
+.left-text {
 	text-align: left;
 }
 
-.center
-{
+.center {
 	margin: 0 auto;
 }
