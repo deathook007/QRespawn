@@ -15,14 +15,13 @@ Dark: #C0392B,#7D3C98,#2874A6,#28b485,#F1C40F,#F39C12,#616A6B,#17202A */
         box-sizing: inherit;
 	
         /*Here dimensions includes padding and border but not the margin as a framework*/
-	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-o-box-sizing:border-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
 }
 
 /* Use rem in place of px bcs rem is relation to root size it helps in making web more responsive */
-
 html,body {
 	/* Implies 1rem=10px root size but px is not a good used practice*/
 	
@@ -56,38 +55,80 @@ a {
 	color:#555;
 }
 
-/* HEADINGS */
+a:hover {
+       color: #0FA0CE; 
+}
 
+p {
+        margin-top: 0; 
+}
+
+/* Lists */
+ul {
+        list-style: circle inside; 
+  }
+ol {
+        list-style: decimal inside; 
+  }
+ol, ul {
+        padding-left: 0;
+        margin-top: 0; 
+  }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%; 
+  }
+li {
+        margin-bottom: 1rem; 
+  }
+
+
+/* HEADINGS */
 h1,h2,h3,h4,h5,h6 {
-	color:#333;
+	color: #333;
 }
 
 h1 {
 	font-size: 3em;
+	line-height: 1.2;  
+	letter-spacing: -.1rem;
 }
 
 h2 {
-	font-size:2.7em;
+	font-size: 2.7em;
+	line-height: 1.25; 
+	letter-spacing: -.1rem;
 }
 
 h3 {
 	font-size: 2.4em;
+	line-height: 1.3;  
+	letter-spacing: -.1rem;
 }
 
 h4 {
 	font-size: 2em;
+	line-height: 1.35; 
+	letter-spacing: -.08rem;
 }
 
 h5 {
 	font-size: 1.4em;
+	line-height: 1.5;  
+	letter-spacing: -.05rem;
 }
 
 h6 {
 	font-size: 1em;
+	line-height: 1.6;  
+	letter-spacing: 0;
 }
 
 
-/* GRID */
+/* GRID LAYOUT */
 
 .full {
 	width: 100%;
@@ -121,21 +162,54 @@ h6 {
 	width: 25%;
 }
 
-
-/* ALIGNMENT */
 /* UTILITY CLASSES */
-.center-text {
+.u_center-text {
 	text-align: center;
 }
 
-.right-text {
+.u_right-text {
 	text-align: right;
 }
 
-.left-text {
+.u_left-text {
 	text-align: left;
 }
 
-.center {
+.u_center {
 	margin: 0 auto;
 }
+
+.u-full-width {
+        width: 100%;
+        box-sizing: border-box; 
+}
+.u-max-full-width {
+        max-width: 100%;
+        box-sizing: border-box; 
+}
+.u-pull-right {
+        float: right; 
+}
+.u-pull-left {
+        float: left; 
+}
+
+/*
+Note:If you wanted to change the styles for buttons on small devices, paste the mobile query code up in the buttons section and style it there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
