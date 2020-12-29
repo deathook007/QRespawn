@@ -29,14 +29,20 @@ html,body {
         font-size: 62.5%;
 	   
 	/* @include for a function to apply oop concept in response */
-	@include respond(tab-land) {
+	@media (min-width: 400px) {
         /* width<1200? */
-        font-size: 56.25%; /* 1em=9px -> 9/16*100 -> 56.25% */
+        font-size: 55%;
+        /* 1em=9px -> 9/16*100 -> 56.25% */
         }
-        @include respond(tab-port) {
+        @media (min-width: 550px) {
+        /* width<1200? */
+        font-size: 56.25%;
+        /* 1em=9px -> 9/16*100 -> 56.25% */
+        }
+        @media (min-width: 750px) {
         font-size: 50%;
         }
-        @include respond(big-desk) {
+        @media (min-width: 1000px) {
         font-size: 75%;
         }
         margin: 0;
