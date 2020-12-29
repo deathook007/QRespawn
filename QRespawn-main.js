@@ -1,3 +1,4 @@
+// Js for basic navigation working
 // Select DOM Items
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
@@ -31,3 +32,5 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+// More are comming soon .........
