@@ -27,6 +27,8 @@ html,body {
 	
         /* Default font size is 16px **10/16=62.5** */
         font-size: 62.5%;
+	   
+	/* @include for a function to apply oop concept in response */
 	@include respond(tab-land) {
         /* width<1200? */
         font-size: 56.25%; /* 1em=9px -> 9/16*100 -> 56.25% */
