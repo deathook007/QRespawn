@@ -5,7 +5,7 @@
 - A css and html framework for quick use in web development projects. ⏱️
 ### Copy and paste the file and start with best practices in css !!
 
-## GRID LAYOUT ** To use please type css3 fileName.css for css template **
+## GRID LAYOUT /* To use please type css3 fileName.css for css template */
 
 ## ScreenShots Below👇👇
 
