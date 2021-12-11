@@ -8,7 +8,7 @@
 ### Grid Layout
 - To use please type css3 fileName.css for css template
 
-## ScreenShots Below👇👇
+### ScreenShots Below👇👇
 
 ![screenshot](https://github.com/deathook007/QRespawn/blob/master/Images/Layout.JPG)
 
